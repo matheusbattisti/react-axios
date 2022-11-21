@@ -8,6 +8,8 @@ import App from "./App";
 import Home from "./routes/Home";
 import Post from "./routes/Post";
 import NewPost from "./routes/NewPost";
+import Admin from "./routes/Admin";
+import EditPost from "./routes/EditPost";
 
 import "./index.css";
 
@@ -26,6 +28,15 @@ const router = createBrowserRouter([
       {
         path: "/new",
         element: <NewPost />,
+      },
+      {
+        path: "/admin",
+        element: <Admin />,
+      },
+      ,
+      {
+        path: "/posts/edit/:id",
+        element: <EditPost />,
       },
     ],
   },

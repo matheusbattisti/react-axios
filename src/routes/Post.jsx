@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 
 import { useParams } from "react-router-dom";
 
+import './Post.css'
+
 const Post = () => {
   const { id } = useParams();
   const [post, setPost] = useState([]);
@@ -25,7 +27,7 @@ const Post = () => {
   }, []);
 
   return (
-    <div>
+    <div className="post-container">
       {!post.title ? (
         <p>Carregando...</p>
       ) : (
